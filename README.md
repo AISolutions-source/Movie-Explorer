@@ -2,7 +2,7 @@
 Download the APK
 You can download the **APK build** from the link below:
 
-[Download APK]((https://github.com/AISolutions-source/Movie-Explorer/releases/tag/release-build))
+[Download APK](https://github.com/AISolutions-source/Movie-Explorer/releases/tag/release-build)
 
 **Movie Explorer**
 A Unity-based application that fetches movie details from The Movie Database (TMDb) API and displays them dynamically.
