@@ -14,10 +14,16 @@ jobs:
         with:
           projectPath: .
           targetPlatform: Android
+          buildName: "app-release"
+          outputPath: "Builds"
+
+      - name: Debug - List Build Directory
+        run: ls -R
+        working-directory: ${{ github.workspace }}
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: Build-APK
-          path: build/Android/*.apk
-          retention-days: 7  # Keep APK for 7 days
+          path: Builds/*.apk
+          retention-days: 7
