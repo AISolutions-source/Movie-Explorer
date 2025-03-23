@@ -1,0 +1,22 @@
+name: Unity Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Unity Builder
+        uses: game-ci/unity-builder@v2
+        with:
+          projectPath: .
+          targetPlatform: Android
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build-APK
+          path: build/Android/*.apk
