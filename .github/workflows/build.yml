@@ -16,7 +16,8 @@ jobs:
           targetPlatform: Android
 
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Build-APK
           path: build/Android/*.apk
+          retention-days: 7  # Keep APK for 7 days
